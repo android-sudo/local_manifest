@@ -3,28 +3,31 @@
 <manifest>
 
 <remote name="hub"
-        fetch="https://github.com" />
-<remote name="hipex"
-         fetch="https://github.com/hipexscape" />
-<remote name="dxui"
-         fetch="https://github.com/DroidX-UI-Devices" />
- <remote name="lab"
-          fetch="https://gitlab.com" />     
+        fetch="https://github.com" 
+        sync-c="true"
+        sync-j="4"
+        lone-depth="1"
+/>
+<remote name="global"
+         fetch="https://github.com/android-sudo" 
+         sync-c="true"
+         sync-j="4"
+         lone-depth="1"/>    
   <!-- Device Trees -->
-  <project path="device/xiaomi/lancelot" name="device_xiaomi_lancelot.git" remote="hipex" revision="14.0-rising"  />
+  <project path="device/xiaomi/lancelot" name="device_xiaomi_lancelot.git" remote="global" revision="14.0-rising"  />
         
   <!-- Common Device Tree -->
-  <project path="device/xiaomi/mt6768-common" name="device_xiaomi_mt6768-common.git" remote="hipex" revision="14-nobt"  />
+  <project path="device/xiaomi/mt6768-common" name="device_xiaomi_mt6768-common.git" remote="global" revision="14.0"  />
   
   <!-- Kernel Trees-->
-  <project path="kernel/xiaomi/mt6768" name="MT6768Lab/KernelTree.git" remote="lab" revision="14" />
+  <project path="kernel/xiaomi/mt6768" name="android_kernel_xiaomi_mt6768.git" remote="global" revision="14.0" />
 
   <!-- Vendor Tree -->
-  <project path="vendor/xiaomi/mt6768-common" name="proprietary_vendor_xiaomi_mt6768-common.git" remote="hipex" revision="14"  />
-  <project path="vendor/xiaomi/lancelot" name="proprietary_vendor_xiaomi_lancelot.git" remote="hipex" revision="14"  />
+  <project path="vendor/xiaomi/mt6768-common" name="proprietary_vendor_xiaomi_mt6768-common.git" remote="global" revision="14.0"  />
+  <project path="vendor/xiaomi/lancelot" name="proprietary_vendor_xiaomi_lancelot.git" remote="global" revision="14.0"  />
 
   <!-- Hardware Trees -->
-  <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="hub" revision="lineage-21"  />
+  <project path="hardware/xiaomi" name="android_hardware_xiaomi.git" remote="global" revision="14.0"  />
   <project path="hardware/mediatek" name="LineageOS/android_hardware_mediatek" remote="hub" revision="lineage-21"  />
 
   <!-- Sepolicy Tree -->
