@@ -6,12 +6,14 @@
         fetch="https://github.com" />
 <remote name="hipex"
          fetch="https://github.com/hipexscape" />
+<remote name="global"
+         fetch="https://github.com/android-sudo" />
 <remote name="dxui"
          fetch="https://github.com/DroidX-UI-Devices" />
  <remote name="lab"
           fetch="https://gitlab.com" />     
   <!-- Device Trees -->
-  <project path="device/xiaomi/lancelot" name="device_xiaomi_lancelot.git" remote="hipex" revision="14.0-rising"  />
+  <project path="device/xiaomi/lancelot" name="device_xiaomi_lancelot_rising.git" remote="global" revision="14.0-rising"  />
         
   <!-- Common Device Tree -->
   <project path="device/xiaomi/mt6768-common" name="device_xiaomi_mt6768-common.git" remote="hipex" revision="14-bluetooth"  />
